@@ -17,4 +17,4 @@ def draw(coord):
 def get():
     emit('dots',dots)
 if __name__ =="__main__":
-    socket.run(app,debug=True,allow_unsafe_werkzeug=True)
+    socketio.run(app, host='0.0.0.0', port=5000)
