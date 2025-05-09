@@ -36,7 +36,7 @@ canvas.addEventListener('mousemove', (e) => {
     const y = e.clientY - rect.top;
     ctx.fillStyle = colorPicker.value;
     ctx.beginPath();
-    ctx.arc(x, y, 5, 0, Math.PI * 2);
+    
     ctx.fill();
     socket.emit('draw', { x, y , color: colorPicker.value });
 });
